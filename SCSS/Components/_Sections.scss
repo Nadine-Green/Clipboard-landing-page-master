@@ -1,0 +1,291 @@
+main{
+    font-family: 'Bai Jamjuree', sans-serif;
+}
+.section{
+    height:100vh;
+    width:100%;
+    }
+    
+    .one{
+       background:(
+        url("../../images/bg-header-desktop.png")
+        no-repeat
+       );
+    
+       img{
+        margin: 0rem auto 3rem auto;
+        padding-top:8rem;
+       }
+        text-align:center;
+    
+        h3{
+            @include block(hsl(210, 10%, 33%), 46px,600);
+            margin-bottom:1rem;
+        }
+    
+        p{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            width:45%;
+            margin: 0 auto;
+            margin-bottom:3rem;
+        }
+        .link{
+        a:first-of-type{
+            @include link(2.7rem, white, hsl(171, 66%, 44%));
+            margin-right:1rem;
+        }
+        a:last-child{
+            @include link(2.7rem, white, hsl(233, 100%, 69%));
+        }
+        }
+    }
+
+    .two{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        #first{
+            text-align:center;
+            h3{
+                @include block(hsl(210, 10%, 33%), 32px,600);
+                margin-bottom:1rem;
+            }
+
+            p{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            width:53%;
+            margin: 0 auto;
+            }
+        }
+    }
+
+    .three{
+
+        #text-block{
+            img{
+                max-width:40rem;
+            }
+            display:flex;
+            gap:7rem;
+
+            .flex-one{
+                display:flex;
+                flex-direction:column;
+                width:22rem;
+                margin-top:1.5rem;
+                height:25rem;
+                justify-content:space-around;
+
+            #para-block{
+                & p:first-child{
+                    @include block(hsl(210, 10%, 33%), 23px,600)
+                }
+
+                & p:last-child{
+                    @include block(hsl(201, 11%, 66%), 16px,400);
+                }
+            }
+            }
+        }
+    }
+
+    .four{
+        img{
+            max-width:50rem;
+            margin:0 auto;
+        }
+
+        .block-one{
+            text-align:center;
+            h3{
+                @include block(hsl(210, 10%, 33%), 32px,600);
+                margin-bottom:1rem;
+            }
+
+            p{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            width:53%;
+            margin: 0 auto;
+            margin-bottom:4rem;
+            }
+
+            
+        }
+    }
+
+    .five{
+        display:flex;
+        flex-direction:column;
+        .block-one{
+            text-align:center;
+            h3{
+                @include block(hsl(210, 10%, 33%), 32px,600);
+                margin-bottom:1rem;
+                margin-top:7rem;
+            }
+
+            p{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            width:53%;
+            margin: 0 auto;
+            margin-bottom:6rem;
+            }
+        }
+
+        .p{
+            display:flex;
+            justify-content:center;
+            gap:1rem;
+            .p-block{
+                img{
+                    margin:0 auto 3rem auto;
+                }
+
+                .head{
+                    @include block(hsl(210, 10%, 33%), 23px,600);
+                }
+
+                & p:last-child{
+                    @include block(hsl(201, 11%, 66%), 16px,400);
+                    line-height:2rem;
+                    width:22rem;
+                }
+
+                text-align:center;
+            }
+            /*
+            .p-block:nth-child(1){
+                & p:last-child{
+                    width:22rem;
+                }
+            }
+
+            .p-block:nth-child(2){
+                & p:last-child{
+                    width:22rem;
+                }
+            }
+
+            .p-block:nth-child(3){
+                & p:last-child{
+                    width:22rem;
+                }
+            }*/
+        }
+    }
+
+    .six{
+            $images: 
+            (one:url("../../images/logo-google.png"),
+            two:url("../../images/logo-ibm.png"),
+            three:url("../../images/logo-microsoft.png"),
+            four:url("../../images/logo-hp.png"),
+            five:url("../../images/logo-vector-graphics.png"));
+
+        .images{
+            display:flex;
+            justify-content: space-around;
+            @each $num, $url in $images{
+                .img-#{$num}{
+                    background:(
+                        $url
+                        no-repeat
+                    );
+                    width:13%;
+                    height:55px;
+                }
+
+        }
+
+       .img-three{
+            margin-top:.5rem;
+        }
+
+        .img-five{
+            margin-top:.7rem;
+        }
+        }
+        text-align:center;
+        .block-two{
+            
+            h3{
+                @include block(hsl(210, 10%, 33%), 32px,600);
+                margin-bottom:1rem;
+                margin-top:6rem;
+            }
+
+            p{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            width:53%;
+            margin: 0 auto;
+            margin-bottom:6rem;
+            }
+        }
+        .link{
+        a:first-of-type{
+            @include link(2.7rem, white, hsl(171, 66%, 44%));
+            margin-right:1rem;
+        }
+        a:last-child{
+            @include link(2.7rem, white, hsl(233, 100%, 69%));
+        }
+    }
+    }
+
+    .seven{
+        img{
+            width:4rem;
+            height:4rem;
+        }
+
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+        height:20vh;
+        background-color: hsl(0, 20%, 95%);
+
+        .link{
+            @include block(hsl(201, 11%, 66%), 18px,400);
+            display:flex;
+            flex-wrap: wrap;
+            flex-basis:1;
+            width:35%;
+            gap:3rem;
+            row-gap:1rem;
+            line-height:-4rem;
+
+            a:hover{
+                color:hsl(171, 66%, 44%);
+                cursor:pointer;
+            }
+        }
+
+        .socials{
+            display:flex;
+            p:hover{
+                filter:brightness(0) saturate(100%) invert(51%) sepia(82%) saturate(361%) 
+                hue-rotate(122deg) brightness(100%) contrast(97%);
+                cursor:pointer;
+            }
+            $social: 
+            (facebook:url("../../images/icon-facebook.svg"),
+            twitter:url("../../images/icon-twitter.svg"),
+            instagram:url("../../images/icon-instagram.svg"));
+
+            @each $social, $link in $social{
+                .social-#{$social}{
+                    background:(
+                        $link
+                        no-repeat
+                    );
+                    width:3rem;
+                    height:2rem;
+                }
+
+        }
+        }
+        }
+
+
+    @include screen(800px);
+    @include button;
